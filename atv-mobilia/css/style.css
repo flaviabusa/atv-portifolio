@@ -5,7 +5,7 @@
 
 /* USO DIRETO */
 body {
-  font-size: clamp(1rem, 0.5rem + 2vw, 3rem);
+  font-size: clamp(1rem, calc(0.5rem + 1.5vw), 3rem);
   font-family: "Montserrat", sans-serif;
   background-color: #F5F5F5;
 }
@@ -39,10 +39,10 @@ header nav ul li a.home{
 /* BANNER */
 
 .banner{
-  margin: 20px 30px 20px 30px;
+  margin: 5vw 5vw 5vw 5vw;
 }
 .banner h1{
-  margin: 40px 0 20px 0;
+  margin: 0 0 20px 0;
   font-size: 2rem;
 }
 .banner h1 span{
@@ -55,3 +55,91 @@ header nav ul li a.home{
   font-size: 1rem;
 }
 
+/* ==== posts ==== */
+
+.posts > ul{
+  padding: 0 5vw 0 5vw;
+}
+
+.posts > ul > li{
+  padding: 30px 30px 30px 30px;
+  border: 2px solid #e5e5e5;
+  border-radius: 20px;
+  background-color: white;
+  margin: 20px 0 20px 0;
+}
+
+.posts > ul > li h2{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.posts > ul > li p{
+  color: #757575;
+  padding: 0 0 0 1vw;
+}
+
+.posts > ul > li ul {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.posts > ul > li ul li{
+  background-color: #F5F5F5;
+  padding: 0 8px 0 8px;
+  border-radius: 20px;
+}
+.posts > ul > li ul li a{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* === Footer === */
+
+footer{
+  margin: 0 5vw 5vw 5vw;
+}
+footer p{
+  background-color: white;
+  border: 2px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #757575;
+  width: 90vw;
+  margin: 5vw auto;
+}
+
+@media only screen and (min-width: 992px) {
+  section.banner, section.posts > ul{
+    display: grid; /* controla quantos intens vao ficar um ao lado do outro*/
+    grid-template-columns: 1fr 1fr ;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+
+  section.banner h1{
+    font-size: 4rem;
+  }
+
+  section.banner p{
+    font-size: 2rem;
+    margin-bottom: 3vw;
+  }
+
+  section.posts p{
+    font-size: 1rem;
+  }
+
+  section.posts > ul > li{
+    margin: 0;
+  }
+
+  footer p{
+    max-width: 1400px;
+    margin: 3vw auto;
+    font-size: 1.5rem;
+  }
+} 
